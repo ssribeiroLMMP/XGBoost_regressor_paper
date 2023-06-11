@@ -1,0 +1,191 @@
+%% 
+%% Copyright 2007-2020 Elsevier Ltd
+%% 
+%% This file is part of the 'Elsarticle Bundle'.
+%% ---------------------------------------------
+%% 
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.2 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%% 
+%% The list of all files belonging to the 'Elsarticle Bundle' is
+%% given in the file `manifest.txt'.
+%% 
+%% Template article for Elsevier's document class `elsarticle'
+%% with harvard style bibliographic references
+
+\documentclass[preprint,12pt,authoryear]{elsarticle}
+
+%% Use the option review to obtain double line spacing
+%% \documentclass[authoryear,preprint,review,12pt]{elsarticle}
+
+%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+%% for a journal layout:
+%% \documentclass[final,1p,times,authoryear]{elsarticle}
+%% \documentclass[final,1p,times,twocolumn,authoryear]{elsarticle}
+%% \documentclass[final,3p,times,authoryear]{elsarticle}
+%% \documentclass[final,3p,times,twocolumn,authoryear]{elsarticle}
+%% \documentclass[final,5p,times,authoryear]{elsarticle}
+%% \documentclass[final,5p,times,twocolumn,authoryear]{elsarticle}
+
+%% For including figures, graphicx.sty has been loaded in
+%% elsarticle.cls. If you prefer to use the old commands
+%% please give \usepackage{epsfig}
+
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers.
+%% \usepackage{lineno}
+
+\journal{Geoenergy Science and Engineering}
+
+\begin{document}
+
+\begin{frontmatter}
+
+%% Title, authors and addresses
+
+%% use the tnoteref command within \title for footnotes;
+%% use the tnotetext command for theassociated footnote;
+%% use the fnref command within \author or \affiliation for footnotes;
+%% use the fntext command for theassociated footnote;
+%% use the corref command within \author for corresponding author footnotes;
+%% use the cortext command for theassociated footnote;
+%% use the ead command for the email address,
+%% and the form \ead[url] for the home page:
+%% \title{Title\tnoteref{label1}}
+%% \tnotetext[label1]{}
+%% \author{Name\corref{cor1}\fnref{label2}}
+%% \ead{email address}
+%% \ead[url]{home page}
+%% \fntext[label2]{}
+%% \cortext[cor1]{}
+%% \affiliation{organization={},
+%%            addressline={}, 
+%%            city={},
+%%            postcode={}, 
+%%            state={},
+%%            country={}}
+%% \fntext[label3]{}
+
+\title{Oil and gas production forecasting using XGBoost regressor}
+
+%% use optional labels to link authors explicitly to addresses:
+%% \author[label1,label2]{}
+%% \affiliation[label1]{organization={},
+%%             addressline={},
+%%             city={},
+%%             postcode={},
+%%             state={},
+%%             country={}}
+%%
+%% \affiliation[label2]{organization={},
+%%             addressline={},
+%%             city={},
+%%             postcode={},
+%%             state={},
+%%             country={}}
+\author[inst1]{Vinicius Mattoso R. da Silva}
+
+\affiliation[inst1]{organization={Laboratory of Microhydrodynamics and Flow in Porous Media, Pontifical Catholic University of Rio de Janeiro (PUC-Rio)},%Department and Organization
+            % addressline={Address Two}, 
+            % city={Rio de Janeiro},
+            % postcode={22222}, 
+            state={Rio de Janeiro},
+            country={Brazil}}
+
+\author[inst1]{Frederico Gomes}
+\author[inst1]{Sergio Ribeiro}
+\author[inst1]{Marcio Carvalho}
+
+\begin{abstract}
+
+% The oil and gas industry has a vital role in the global economy. Due to the financial impact, an efficient operation is a target that many companies look for. With the capability to predict the production of oil and gas, companies are able to optimize their operations and costs, improving their operational efficiency more and more. In order to overcome this issue, many companies use reservoir simulation software to predict production. Nonetheless, this approach to solving the problem requires a huge computational cost and a reliable geological model. Both of the requirements are expensive, and a reliable geological model of the reservoir is another issue that the industry has. With the advantage of artificial intelligence resources, companies can use their owners' amount of data in order to make data-driven models to overcome many industries' issues, including the production forecast. In this study, a machine learning model was used to predict the oil and gas production from a wellbore, making use of the time series from the sensors along the wellbore regions. The results showed the relevance of the feature engineering process and the capability of the model to predict oil and gas based on the available data.
+
+% V2
+
+The world economy greatly depends on the oil and gas industry. An efficient operation is a goal that many firms pursue due to its financial impact. Companies are able to optimize their production and costs, increasing their operational efficiency as a result of their ability to predict the production of oil and gas. Many businesses employ reservoir simulation software to forecast production to get around this problem. However, this method of issue-solving necessitates a solid geological model and a high computing cost. Both of the requirements are expensive, and the sector also faces a problem with a trustworthy geological model of the reservoir. With the use of artificial intelligence resources, businesses can take advantage of the vast amounts of data that belong to their owners to create data-driven models that address problems common to many industries, such as production forecasting. The data series from the sensors along the wellbore areas were utilized in this study to train a machine-learning model to forecast the oil and gas output from a wellbore. The outcomes demonstrated the applicability of the feature engineering procedure and the model's capacity to forecast oil and gas based on the available data.
+
+
+% The forecast of oil and gas production is essential for the industry's efficient operation.
+
+
+% Forecasting oil and gas production is essential for the industry to operate efficiently. Companies can optimize their operations, streamline costs, and remain competitive by accurately predicting production levels. In the past, predicting production levels was a challenging task that relied on historical data and intuition. Still, with the advancement of machine learning models such as XGBoost, companies can now make data-driven decisions and leverage the power of predictive analytics to gain a competitive edge. The relevance of forecasting in the oil and gas industry cannot be overstated, and accurate predictions are crucial for maintaining profitability and ensuring sustainable growth.
+
+
+\end{abstract}
+
+%%Graphical abstract
+\begin{graphicalabstract}
+%\includegraphics{grabs}
+\end{graphicalabstract}
+
+%%Research highlights
+\begin{highlights}
+\item Research highlight 1
+\item Research highlight 2
+\end{highlights}
+
+\begin{keyword}
+%% keywords here, in the form: keyword \sep keyword
+Production forecasting, \ Machine learning, \ Tree boosting, regressor, \ Data-driven model
+%% PACS codes here, in the form: \PACS code \sep code
+
+%% MSC codes here, in the form: \MSC code \sep code
+%% or \MSC[2008] code \sep code (2000 is the default)
+
+\end{keyword}
+
+\end{frontmatter}
+
+%% \linenumbers
+
+%% main text
+\input{Sections/Introduction}
+\input{Sections/Dataset}
+\input{Sections/XGBoost_method}
+\input{Sections/Results}
+\input{Sections/conclusions}
+% \input{Sections/Introduction_labels}
+% \input{Sections/TASK_AI}
+% \input{Sections/information}
+%% The Appendices part is started with the command \appendix;
+%% appendix sections are then done as normal sections
+%% \appendix
+
+%% \section{}
+%% \label{}
+
+%% If you have bibdatabase file and want bibtex to generate the
+%% bibitems, please use
+%%
+%%  \bibliographystyle{elsarticle-harv} 
+%%  \bibliography{<your bibdatabase>}
+
+%% else use the following coding to input the bibitems directly in the
+%% TeX file.
+
+% \begin{thebibliography}{00}
+
+% %% \bibitem[Author(year)]{label}
+% %% Text of bibliographic item
+
+% \bibitem[ ()]{}
+
+% \end{thebibliography}
+
+\bibliographystyle{elsarticle-harv} 
+\bibliography{bibfile}
+\end{document}
+
+\endinput
+%%
+%% End of file `elsarticle-template-harv.tex'.
